@@ -8,11 +8,24 @@
 <body>
     <div>
         <h2>Symbolic Solo Guitar and Audio Backing Track Aligned Dataset</h2>
-        <p></p>
+        <p>Model was trained on custom collected dataset of 17 thousand pairs od symbolic solos aligned with synthesized audio backing tracks.</p>
+        <p>Dataset consists predominantly of hard rock and metal genres.</p>
     </div>
     <div>
         <h2>Model Architecture</h2>
-        <p></p>
+        <p>The complete proposed pipeline is a four-stage encoder–adapter–decoder system.</p>
+        <h3>Audio feature extraction</h3>
+        <p>A frozen Music2Latent encoder transforms the raw waveform into a sequence of 64-dimensional continuous latents produced at ≈10 Hz.
+</p>
+        <h3>Projection adapter</h3>
+        <p>A trainable projection layer maps the continuous latents to the token-embedding space of the language model.
+</p>
+        <h3>Conditioning strategy</h3>
+        <p>The projected latents are prepended as a prefix and are seen through cross-attention only once, keeping generation cost independent of audio length.
+</p>
+        <h3>Autoregressive decoder</h3>
+        <p>A Perceiver AR network predicts DADA-GP tokens autoregressively while attending to both the prefix and its own latent queries.
+</p>
     </div>
     <div>
         <h2>Generation Samples</h2>
