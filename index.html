@@ -6,24 +6,26 @@
     <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
+    <h1>Audio Conditioned Symbolic Solo Guitar Generation with PerceiverAR</h1>
     <div>
-        <h2>Symbolic Solo Guitar and Audio Backing Track Aligned Dataset</h2>
-        <p>Model was trained on custom collected dataset of 17 thousand pairs od symbolic solos aligned with synthesized audio backing tracks.</p>
+        <h2>Dataset</h2>
+        <p>Model was trained on custom collected dataset of 17 thousand pairs of symbolic guitar solos aligned with synthesized audio backing tracks.</p>
         <p>Dataset consists predominantly of hard rock and metal genres.</p>
     </div>
     <div>
         <h2>Model Architecture</h2>
+        <img src="img/Model_arch.png" alt="Model Architecture">
         <p>The complete proposed pipeline is a four-stage encoder–adapter–decoder system.</p>
-        <h3>Audio feature extraction</h3>
+        <h4>Audio feature extraction</h4>
         <p>A frozen Music2Latent encoder transforms the raw waveform into a sequence of 64-dimensional continuous latents produced at ≈10 Hz.
 </p>
-        <h3>Projection adapter</h3>
+        <h4>Projection adapter</h4>
         <p>A trainable projection layer maps the continuous latents to the token-embedding space of the language model.
 </p>
-        <h3>Conditioning strategy</h3>
+        <h4>Conditioning strategy</h4>
         <p>The projected latents are prepended as a prefix and are seen through cross-attention only once, keeping generation cost independent of audio length.
 </p>
-        <h3>Autoregressive decoder</h3>
+        <h4>Autoregressive decoder</h4>
         <p>A Perceiver AR network predicts DADA-GP tokens autoregressively while attending to both the prefix and its own latent queries.
 </p>
     </div>
@@ -77,6 +79,132 @@
               <td>
                 <a href="audio/gen/Metallica_Devils dance_generated.gp5" download>
                   solo_02.gp5
+                </a>
+              </td>
+            </tr>
+
+            <!-- Example #3 -->
+            <tr>
+              <td>
+                <audio controls preload="none"
+                       src="audio/cond/MClapton, Eric_Blues_Clapton, Eric - Blow Wind Blow_backing_0.gp4.wav">
+                </audio>
+              </td>
+
+              <td>
+                <audio controls preload="none"
+                       src="audio/gen/Clapton, Eric_Clapton, Eric - Blow Wind Blow_generated.wav">
+                </audio>
+              </td>
+
+              <td>
+                <a href="audio/gen/Clapton, Eric_Clapton, Eric - Blow Wind Blow_generated.gp5" download>
+                  solo_03.gp5
+                </a>
+              </td>
+            </tr>
+
+            <!-- Example #4 -->
+            <tr>
+              <td>
+                <audio controls preload="none"
+                       src="audio/cond/Iron maiden_The_Number_Of_The_Beast_Children of the damned 3_backing_0_part_0.gp5.wav">
+                </audio>
+              </td>
+
+              <td>
+                <audio controls preload="none"
+                       src="audio/gen/Iron maiden_Children of the damned 3_generated.wav">
+                </audio>
+              </td>
+
+              <td>
+                <a href="audio/gen/Iron maiden_Children of the damned 3_generated.gp5" download>
+                  solo_04.gp5
+                </a>
+              </td>
+            </tr>
+
+            <!-- Example #5 -->
+            <tr>
+              <td>
+                <audio controls preload="none"
+                       src="audio/cond/Metallica_Metallica_Enter sandman 10_backing_0.gp5.wav">
+                </audio>
+              </td>
+
+              <td>
+                <audio controls preload="none"
+                       src="audio/gen/Metallica_Enter sandman 10_generated.wav">
+                </audio>
+              </td>
+
+              <td>
+                <a href="audio/gen/Metallica_Enter sandman 10_generated.gp5" download>
+                  solo_05.gp5
+                </a>
+              </td>
+            </tr>
+
+            <!-- Example #5 -->
+            <tr>
+              <td>
+                <audio controls preload="none"
+                       src="audio/cond/Metallica_Metallica_Enter sandman 10_backing_0.gp5.wav">
+                </audio>
+              </td>
+
+              <td>
+                <audio controls preload="none"
+                       src="audio/gen/Metallica_Enter sandman 10_generated.wav">
+                </audio>
+              </td>
+
+              <td>
+                <a href="audio/gen/Metallica_Enter sandman 10_generated.gp5" download>
+                  solo_05.gp5
+                </a>
+              </td>
+            </tr>
+
+            <!-- Example #6 -->
+            <tr>
+              <td>
+                <audio controls preload="none"
+                       src="audio/cond/Scorpions__Scorpions - Can't Live Without You_backing_0.gp3.wav">
+                </audio>
+              </td>
+
+              <td>
+                <audio controls preload="none"
+                       src="audio/gen/Scorpions_Scorpions - Can't Live Without You_generated.wav">
+                </audio>
+              </td>
+
+              <td>
+                <a href="audio/gen/Scorpions_Scorpions - Can't Live Without You_generated.gp5" download>
+                  solo_06.gp5
+                </a>
+              </td>
+            </tr>
+
+            <!-- Example #7 -->
+            <tr>
+              <td>
+                <audio controls preload="none"
+                       src="audio/cond/Vai steve_The_Ultra_Zone_Here i am_backing_0_part_0.gp4.wav">
+                </audio>
+              </td>
+
+              <td>
+                <audio controls preload="none"
+                       src="audio/gen/Vai steve_Here i am_generated.wav">
+                </audio>
+              </td>
+
+              <td>
+                <a href="audio/gen/Vai steve_Here i am_generated.gp5" download>
+                  solo_07.gp5
                 </a>
               </td>
             </tr>
