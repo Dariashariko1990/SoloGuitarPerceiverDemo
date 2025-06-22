@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Audio Conditioned Symbolic Solo Guitar Generation with PerceiverAR</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+    <div>
+        <h2>Symbolic Solo Guitar and Audio Backing Track Aligned Dataset</h2>
+        <p></p>
+    </div>
+    <div>
+        <h2>Model Architecture</h2>
+        <p></p>
+    </div>
+    <div>
+        <h2>Generation Samples</h2>
+         <table>
+          <thead>
+            <tr>
+              <th>Conditioning Audio</th>
+              <th>Generated Solo</th>
+              <th>Download GP5</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <!-- Example #1 -->
+            <tr>
+              <td>
+                <audio controls preload="none"
+                       src="audio/cond/Wild Obsession_Wild_Obsession_broken-heart.36400_backing_0.gp4.wav">
+                </audio>
+              </td>
+
+              <td>
+                <audio controls preload="none"
+                       src="audio/gen/Wild Obsession_broken-heart.36400_generated.wav">
+                </audio>
+              </td>
+
+              <td>
+                <a href="audio/gen/Wild Obsession_broken-heart.36400_generated.gp5" download>
+                  solo_01.gp5
+                </a>
+              </td>
+            </tr>
+
+            <!-- Example #2 -->
+            <tr>
+              <td>
+                <audio controls preload="none"
+                       src="audio/cond/Metallica__Devils dance_backing_0.gp5.wav">
+                </audio>
+              </td>
+
+              <td>
+                <audio controls preload="none"
+                       src="audio/gen/Metallica_Devils dance_generated.wav">
+                </audio>
+              </td>
+
+              <td>
+                <a href="audio/gen/Metallica_Devils dance_generated.gp5" download>
+                  solo_02.gp5
+                </a>
+              </td>
+            </tr>
+
+            <!-- add more rows as needed -->
+          </tbody>
+        </table>
+    </div>
+</body>
+<footer>
+  <p>© 2025 Daria Shariko · Code on <a href="https://github.com/Dariashariko1990/SoloGuitarPerceiver">GitHub</a></p>
+</footer>
+</html>

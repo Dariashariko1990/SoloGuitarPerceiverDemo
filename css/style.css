@@ -1,0 +1,5 @@
+/* css/style.css */
+table { margin: 1em 0; border-collapse: collapse; }
+audio { width: 100%; }
+td, th { padding: .4em; text-align: center; }
+body { max-width: 900px; margin: auto; font-family: sans-serif; }
